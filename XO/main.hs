@@ -1,7 +1,7 @@
 {-
  - Title: Haskell XO
  - By:    Kovacs Gyorgy
- - Date:  2016.08.29
+ - Date:  2016.09.08
  -}
 import Data.Maybe
 
@@ -43,40 +43,70 @@ main = do
 
 loop :: GameState -> IO ()
 loop state = do
+    putStrLn $ "Player " ++ (show . getPlayer) state ++ "'s turn."
     input <- getLine
     newState <- gameLog state (gameLogic input state)
     loop newState
     
 gameLog :: GameState -> Try GameState -> IO GameState
 gameLog _ (Ok state) = do 
-    putStrLn "Everything is ok."
+    putStrLn "Everything is ok.\n"
+    printTable . getBoard $ state
     return state
 gameLog oldState (Fail error) = do
-    putStrLn $ "Received Error " ++ error
+    putStrLn $ "Error: " ++ error ++ "\n"
+    printTable . getBoard $ oldState
     return oldState
     
 gameLogic :: String -> GameState -> Try GameState
-gameLogic input (player, board) = do
-    _ <- extractInput input
-    return (player, emptyBoard)
+gameLogic string (player, board) = do
+    input <- extractPointFrom string
+    point <- isBetweenLimits input
+    newBoard <- markBoard (player, board) input
+    return (next player, newBoard)
 
-extractInput :: String -> Try Point
-extractInput input = if isNothing myPoint
-                     then Fail "Incorrect Input!"
-                     else Ok (fromJust myPoint)
-    where myPoint = tryExtractPoint (reads input :: [(Point, String)])
-
-tryExtractPoint :: [(Point, String)] -> Maybe Point
-tryExtractPoint a 
-    | a == [] || pointNotOk (getPoint a) = Nothing
-    | otherwise = Just (getPoint a)
-    where getPoint = fst . head
-          minValue = 1
+extractPointFrom :: String -> Try Point
+extractPointFrom input 
+    | length array < 1 = Fail "Incorrect Input!"
+    | otherwise = Ok point
+    where array = reads input :: [(Point, String)]
+          point = fst . head $ array
+          
+isBetweenLimits :: Point -> Try Point
+isBetweenLimits (x, y)
+    | isGood x && isGood y = Ok (x, y)
+    | otherwise = Fail "Point provided is outside Bounds!"
+    where minValue = 1 
           maxValue = 3
-          pointNotOk point = 
-              let a = fst point
-                  b = snd point
-                  isBetween min max value = (min <= value) && (value <= max)
-                  isOk = isBetween minValue maxValue
-              in not (isOk a && isOk b) 
- 
+          isBetween min max val = (min <= val) && (val <= max)
+          isGood = isBetween minValue maxValue
+          
+markBoard :: GameState -> Point -> Try Board
+markBoard _ _ = Ok emptyBoard
+              
+data Index = First | Second | Third deriving Eq
+
+get :: Index -> (a, a, a) -> a
+get First (a, _, _)  = a
+get Second (_, b, _) = b
+get Third (_, _, c)  = c
+
+printTable :: Board -> IO()
+printTable (row1, row2, row3) = do 
+    putStrLn . show $ [getf, gets, gett] <*> [row1]
+    putStrLn . show $ [getf, gets, gett] <*> [row2]
+    putStrLn . show $ [getf, gets, gett] <*> [row3]
+    putStrLn ""
+    where getf = get First
+          gets = get Second
+          gett = get Third
+
+getBoard :: GameState -> Board
+getBoard = snd
+
+getPlayer :: GameState -> Player
+getPlayer = fst
+
+next :: Player -> Player
+next X = O
+next O = X
