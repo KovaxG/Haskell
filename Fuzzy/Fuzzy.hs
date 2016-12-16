@@ -51,15 +51,17 @@ instance FuzzySymbol DCS where
         
     toFuzzy symbols value = foldl (\a symbol -> a ++ [(symbol, membership value symbol)]) [] symbols
     
-    fromFuzzy wfs fuzzyValue = sum weightedFuzzyValue / sum (snd <$> fuzzyValue)
-        where weightedFuzzyValue = zipWith (\fv w -> fv * w) (snd <$> fuzzyValue) weights
-              weights = snd <$> wfs
+    fromFuzzy weightedFuzzySet fuzzyValue = sum weightedFuzzyValue / sum weights
+        where weightedFuzzyValue = zipWith (\fv w -> fv * w) weights symbolWeights
+              symbolWeights = snd <$> weightedFuzzySet
+              weights = snd <$> fuzzyValue
 
 
 -- Doesn't check if the value provided is normalized or not.
 normalize :: FuzzyValue -> FuzzyValue
 normalize fuzzyValue = (\(s, v) -> (s, v * norm)) <$> fuzzyValue
-    where norm = 1.0 / sum (snd <$> fuzzyValue)
+    where norm = 1.0 / sum weights
+          weights = snd <$> fuzzyValue
 
 
 --transition :: FLRS -> [FuzzyValue] -> [FuzzyValue]
@@ -69,3 +71,4 @@ normalize fuzzyValue = (\(s, v) -> (s, v * norm)) <$> fuzzyValue
 -- Defining fuzzyfying and defuzzyfying functions
 fuzzyfy = toFuzzy (fuzzySymbols :: [DCS])
 defuzzyfy = fromFuzzy (weightedFuzzySet :: [(DCS, Double)])
+
