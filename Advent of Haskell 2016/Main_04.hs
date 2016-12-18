@@ -10,38 +10,28 @@ import Data.Char (isNumber)
 import Data.Maybe
 import Data.List
 
-test1 = "aaaaa-bb-z-y-x-123[abxyz]"
-test2 = "a-b-c-d-e-f-g-h-987[abcde]"
-test3 = "not-a-real-room-404[oarel]"
-test4 = "totally-real-room-200[decoy]"
-
 main :: IO ()
 main = do
-    content <- lines <$> readFile "input_04_test.txt"
-    mapM (putStrLn . show) (doAll <$> content)
-    return ()
+    content <- lines <$> readFile "input_04.txt"
+    --mapM (putStrLn . show) (doAll <$> content)
+    putStrLn . show . sum $ doAll <$> content
           
 
-doAll :: String -> ([(Char, Int)], String, String)
+doAll :: String -> Int
 doAll s
-    | parsedCode == code  = (nrOfOccurences, parsedCode, code)
-    | otherwise = (nrOfOccurences, parsedCode, code)
+    | parsedCode == code  = checksum
+    | otherwise = 0
     where firstPart = takeWhile (not . isNumber) s
     
           secondPart = dropWhile (not . isNumber) s
           
-          nrOfOccurences = sortBy occurences $ sortBy alphabet $ filter (\(c, nr) -> nr /= 0) $ countChar firstPart <$> letters
+          nrOfOccurences = sortBy occurences $ filter (\(c, nr) -> nr /= 0) $ countChar firstPart <$> letters
           
           parsedCode = map fst $ take 5 nrOfOccurences
-          
-          alphabet (c1, _) (c2, _)
-            | c1 > c2 = GT
-            | c1 < c2 = LT
-            | otherwise = EQ
             
           occurences (_, n1) (_, n2)
-            | n1 > n2 = GT
-            | n1 < n2 = LT
+            | n1 > n2 = LT
+            | n1 < n2 = GT
             | otherwise = EQ
           
           checksum = read $ takeWhile isNumber secondPart :: Int
