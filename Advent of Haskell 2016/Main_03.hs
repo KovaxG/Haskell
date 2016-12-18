@@ -1,7 +1,7 @@
 {- 
  - For Advent of Code 2016
  - www.adventofcode.com
- - Problem 3
+ - Problem 3 - *
  - by Kovax 
  - 2016.12.16
  -}
