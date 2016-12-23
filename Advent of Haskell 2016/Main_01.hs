@@ -26,7 +26,7 @@ removeComma s
 removeCommas :: [String] -> [String]
 removeCommas = fmap removeComma
 
-parseInput :: [String] -> Position    
+parseInput :: [String] -> Position
 parseInput = foldl rule (0,0, North)
     where rule (x, y, d) s 
             | isTurnRightInstruction s = case d of
