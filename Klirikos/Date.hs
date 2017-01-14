@@ -6,6 +6,7 @@ module Date (
     isDate,
     nullDate,
     readDate,
+    showNormal,
     Date (..)
 ) where 
 
@@ -14,7 +15,7 @@ import Data.Char (isNumber, isSpace)
 data Date = Date { year :: Int
                  , month :: Int
                  , day :: Int
-                 } deriving (Show)
+                 }
     
 -- TODO may be better to replace the definitions of the year, the month and
 -- the day to: yearString = takeWhile isNumber s
@@ -47,3 +48,25 @@ areNumbers s = and $ fmap isNumber s
 trim :: String -> String
 trim = f . f
    where f = reverse . dropWhile isSpace
+
+
+instance Show Date where
+    show d = concat [yearString, ".", monthString, ".", dayString]
+        where yearString = show $ year d
+        
+              _monthString = show $ month d
+              monthString = if length _monthString < 2
+                            then "0" ++ _monthString
+                            else _monthString
+                            
+              _dayString = show $ day d
+              dayString = if length _dayString < 2
+                          then "0" ++ _dayString
+                          else _dayString
+
+
+showNormal :: Date -> String
+showNormal d = concat [yearString, "/", monthString, "/", dayString]
+    where yearString = show $ year d
+          monthString = show $ month d
+          dayString = show $ day d

@@ -4,7 +4,8 @@
  -}
 module Day (
     parseDay,
-    getTotal
+    getTotal,
+    Day (..)
 ) where 
 
 import Date
@@ -12,7 +13,7 @@ import Transaction
 
 data Day = Day { date :: Date
                , transactions :: [Transaction]
-               } deriving (Show)
+               }
 
 
 nullDay :: Day
@@ -36,7 +37,23 @@ parseDay = foldl logic []
               | otherwise = acc
 
 
-getTotal :: Day -> Double
-getTotal (Day myDate transList) = foldl rule 0.0 transList
-    where rule :: Double -> Transaction -> Double
+getTotal :: Day -> Int
+getTotal (Day myDate transList) = foldl rule 0 transList
+    where rule :: Int -> Transaction -> Int
           rule acc trans = acc + change trans
+          
+         
+instance Show Day where
+    show d = dateString ++ "\n" ++ showAll (transactions d) ++ balance ++ "\n"
+        where dateString = show $ date d
+        
+              showAll :: [Transaction] -> String
+              showAll ts = concat $ addNL <$> (show <$> ts)
+              
+              addNL :: String -> String
+              addNL s = s ++ "\n"
+              
+              _balance = (show $ getTotal d) ++ " Ron"
+              balance = if getTotal d < 0
+                        then "= " ++ _balance
+                        else "= +" ++ _balance

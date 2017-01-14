@@ -32,11 +32,11 @@ testIsTransaction = do
     putStrLn $ "falseTest4 [" ++ t falseTest4 ++ "]"
     
     
-test1 = readTransaction "-12.4 Chocolate" == Transaction {change = -12.4, description = "Chocolate"}
-test2 = readTransaction "+10 Chips" == Transaction {change = 10.0, description = "Chips"}
-test3 = readTransaction "+12.A Betu van a tizedesek helyeben" == Transaction {change = 12.0, description = "A Betu van a tizedesek helyeben"}
-test4 = readTransaction "+90sszeer a szoveg a szammal" == Transaction {change = 90.0, description = "sszeer a szoveg a szammal"}
-test5 = readTransaction "+99.54" == Transaction {change = 99.54, description = "No Description"}
+test1 = readTransaction "-12.4 Chocolate" == Transaction {change = -1240, description = "Chocolate"}
+test2 = readTransaction "+10 Chips" == Transaction {change = 1000, description = "Chips"}
+test3 = readTransaction "+12.A Betu van a tizedesek helyeben" == Transaction {change = 1200, description = "A Betu van a tizedesek helyeben"}
+test4 = readTransaction "+90sszeer a szoveg a szammal" == Transaction {change = 9000, description = "sszeer a szoveg a szammal"}
+test5 = readTransaction "+99.54" == Transaction {change = 9954, description = "No Description"}
 test6 = readTransaction "asfdagsqdsfas" == nullTransaction
 test7 = readTransaction "22 segg" == nullTransaction
 test8 = readTransaction "+Nincsenek szamok" == nullTransaction
