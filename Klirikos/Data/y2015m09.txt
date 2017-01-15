@@ -1,0 +1,176 @@
+2015.09.01 
+= 0 Ron 
+Balance: +167.8 Ron 
+ 
+2015.09.02 
+= 0 Ron 
+Balance: +167.8 Ron 
+ 
+2015.09.03 
+= 0 Ron 
+Balance: +167.8 Ron 
+ 
+2015.09.04 
+= 0 Ron 
+Balance: +167.8 Ron 
+ 
+2015.09.05 
+-7.4 Sweppes + Fagyi + Csupácsupsz 
+-1 Pombär 
+= -8.4 Ron 
+Balance: +159.4 Ron 
+ 
+2015.09.06 
+-1 Templom 
+= -1 Ron 
+Balance: +158.4 Ron 
+ 
+2015.09.07 
++18 Sapa 
+= +18 Ron 
+Balance: +176.4 Ron 
+ 
+2015.09.08 
+= 0 Ron 
+Balance: +176.4 Ron 
+ 
+2015.09.09 
++10 Mama 
+-3 Jegy 
+-2.5 Kapcsoló 
+-2 Víz 
+= +2.5 Ron 
+Balance: +178.9 Ron 
+ 
+2015.09.10 
++300 Garzon 
+-154 Red Army Choir Koncert jegyek 
+= +146 Ron 
+Balance: +324.9 Ron 
+ 
+2015.09.11 
+-3 Jegy 
+-4 Jegy 
+-11 Piadina Genova 
++5 Andi 
+= -13 Ron 
+Balance: +311.9 Ron 
+ 
+2015.09.12 
+-44.2 The Settlers 5 
+= -44.2 Ron 
+Balance: +267.7 Ron 
+ 
+2015.09.13 
++50 Sapa 
+-3 Jegy 
+-25 Virág az Oszinak 
+-36 Atmega328 x 2 
+-45 Attiny85 x 5 
+-15 Kék 10mm LED x 5 
+-35 Piros 20mm LED x 5 
+-40 Kék 20mm LED x 5 
+-40 Zöld 20mm LED x 5 
+-34 Ebéd Pepével 
++2 Andi 
+-4 Jegy 
+= -225 Ron 
+Balance: +42.7 Ron 
+ 
+2015.09.15 
++50 Mama 
+= +50 Ron 
+Balance: +92.7 Ron 
+ 
+2015.09.16 
+-100 Fogorvos 
+-6.8 Saimon 
+-4.5 Üdito + Maom 
+-4 Jegy 
+= -115.3 Ron 
+Balance: -22.6 Ron 
+ 
+2015.09.17 
++100 Sapa 
+= +100 Ron 
+Balance: +77.4 Ron 
+ 
+2015.09.18 
+-4 Nestea 
+-4.9 Szendvics + Pufuléc 
+-333 Monitor 
++3 Andi a monitorhoz 
+= -338.9 Ron 
+Balance: -261.5 Ron 
+ 
+2015.09.19 
+= 0 Ron 
+Balance: -261.5 Ron 
+ 
+2015.09.20 
+= 0 Ron 
+Balance: -261.5 Ron 
+ 
+2015.09.21 
+-3.5 Nestea 
+-8 Két Jegy 
+-10 Shaorma 
+= -21.5 Ron 
+Balance: -283 Ron 
+ 
+2015.09.21 
+-20 Gombok a Ketyeréhez 
+-4 Nestea 
+-2.6 Két Chocapic 
+-2 Kéregeto 
+= -28.6 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.22 
+= 0 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.23 
+= 0 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.24 
+= 0 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.25 
+-10 Minecraft Csipszek 
+= -10 Ron 
+Balance: -321.6 Ron 
+ 
+2015.09.26 
+-10 Nyiratkozás 
++20 Sanya 
+= +10 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.27 
+= 0 Ron 
+Balance: -311.6 Ron 
+ 
+2015.09.28 
+-3.5 Nestea 
+-2 Rágó 
+-9.5 Papír 
+-20 Ebéd 
+-8 Két Pár Zokni 
+-20 Üditozés 
+= -63 Ron 
+Balance: -374.6 Ron 
+ 
+2015.09.29 
+= 0 Ron 
+Balance: -374.6 Ron 
+ 
+2015.09.30 
+-2.5 Sprite 
+-12 Saimon 
+-6 ?? 
+-3 Mustár 
+= -23.5 Ron 
+Balance: -398.1 Ron 

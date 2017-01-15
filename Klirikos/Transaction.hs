@@ -56,13 +56,23 @@ readTransaction s
 -- majd atgondolom kesobb
 instance Show Transaction where
     show t = sign ++ balanceString ++ " " ++ description t
-        where sign  = if change t >= 0
-                      then "+"
-                      else "-"
-              _balanceString = show $ abs $ change t
-              balanceString = if length _balanceString < 2
-                              then _balanceString
-                              else formattedString
-              formattedString = let (a, b) = splitAt 2 _balanceString
-                                    number = a ++ "." ++ b
-                                in init $ reverse $ dropWhile (\c -> c `elem` "0")  $ reverse number
+        where sign :: String
+              sign = if change t >= 0
+                     then "+"
+                     else "-"
+              
+              absBani :: String              
+              absBani = show $ abs $ change t
+              
+              _balanceString :: String
+              _balanceString = b2l absBani
+              
+              balanceString :: String
+              balanceString = _balanceString
+              
+              b2l :: String -> String
+              b2l s
+                  | length s == 1 = "0.0" ++ s
+                  | length s == 2 = "0."  ++ s
+                  | otherwise = let (a, b) = splitAt 2 $ reverse s
+                                in  reverse $ a ++ "." ++ b

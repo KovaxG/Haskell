@@ -1,0 +1,148 @@
+2016.06.01 
+= 0 Ron 
+Balance: + 1437.8 Ron 
+ 
+2016.06.02 
+= 0 Ron 
+Balance: + 1437.8 Ron 
+ 
+2016.06.03 
+-3 Csipsz 
+= -3 Ron 
+Balance: + 1434.8 Ron 
+ 
+2016.06.04 
++150 Sapa 
+-4.3 Fornetti 
+-3.4 Nestea 
+-36 Human Resource Machine 
+= +106.3 Ron 
+Balance: +1541.1 Ron 
+ 
+2016.06.05 
+= 0 Ron 
+Balance: +1541.1 Ron 
+ 
+2016.06.06
+-19 Stronghold 
+= -19 Ron 
+Balance: +1522.1 Ron 
+ 
+2016.06.07 
+-19 2 Shaorma 
+-10 Olló + Vonalzó + Doszár 
+-13.5 Avocado + Nestea 
+= -42.7 Ron 
+Balance: +1479.4 Ron 
+ 
+2016.06.08 
+-20 Méteres + Csavarhúzó 
++200 Garzon 
+= +180 Ron 
+Balance: +1659.4 Ron 
+ 
+2016.06.09 
+= 0 Ron 
+Balance: +1659.4 Ron 
+ 
+2016.06.10 
+-85 Andi kászka + Pepe telefon elem 
+-275 Billentyuzet 
+-97 Tábla 
+= -457 Ron 
+Balance: +1202.4 Ron 
+ 
+2016.06.11 
++50 Magdi Mama 
+-16 Két Szendvics + Nestea 
++5 Andi 
+-5 Fött Kukorica 
+-18 Taxi Haza 
+= +16 Ron 
+Balance: +1218.4 Ron 
+ 
+2016.06.12 
+= 0 Ron 
+Balance: +1218.4 Ron 
+ 
+2016.06.13 
+= 0 Ron 
+Balance: +1218.4 Ron 
+ 
+2016.06.14 
+-3 Fanta 
+-9 2 Fekete Márkertöltény 
+= -12 Ron 
+Balance: +1206.4 Ron 
+ 
+2016.06.15 
+= 0 Ron 
+Balance: +1206.4 Ron 
+ 
+2016.06.16 
+= 0 Ron 
+Balance: +1206.4 Ron 
+ 
+2016.06.17 
+= 0 Ron 
+Balance: +1206.4 Ron 
+ 
+2016.06.18 
+-3.5 Fanta 
+-85 Battlelab Tartozás 
+= -88.5 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.19 
+= 0 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.20 
+= 0 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.21 
+= 0 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.22 
+= 0 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.23 
+= 0 Ron 
+Balance: +1117.9 Ron 
+ 
+2016.06.24 
+-10.4 Bruschetti, Nestea, Rágó, Pzs 
+-5.2 Paradicsom 
+= -15.6 Ron 
+Balance: +1102.3 Ron 
+ 
+2016.06.25 
+= 0 Ron 
+Balance: +1102.3 Ron 
+ 
+2016.06.26 
++30 Magdi Mama 
+= +30 Ron 
+Balance: +1132.3 Ron 
+ 
+2016.06.27 
++95 Mama 
+= +95 Ron 
+Balance: +1227.3 Ron 
+ 
+2016.06.28 
+= 0 Ron 
+Balance: +1227.3 Ron 
+ 
+2016.06.29 
+= 0 Ron 
+Balance: +1227.3 Ron 
+ 
+2016.06.30 
++30 Magdi Mama 
+-30 Andi Sapa Dinye 
+= 0 Ron 
+Balance: +1227.3 Ron 
